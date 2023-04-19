@@ -129,7 +129,7 @@ export default {
         background: var(--main-purple);
     }
     .btn_theme > input:checked + label:after {
-        left:26px;
+        left:28px;
         transform: translateX(-10%);
         background: var(--white);
     }
