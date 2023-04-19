@@ -1,6 +1,9 @@
 
 <h1 align='center'> Dictionary </h1>
 
+<img src="./src/assets/image1.png" alt="">
+<img src="./src/assets/image2.png" alt="">
+
 ## | Descrição |
 
 Esse é o Dictionary, um app que permite o usuário encontrar o signicado das palavras pesquisadas.
