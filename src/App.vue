@@ -218,6 +218,7 @@ export default {
     font-size: 50px;
     line-height: 70px;
     margin-bottom: 20px;
+    margin-top:35px;
 
     color: var(--dark-grey);
   }
