@@ -1,8 +1,9 @@
 <template>
     <header>
         <div class="icon_dictionary">
-            <img src="../assets/iconoir_book.png" alt="">
+            <i class="fa-solid fa-book"></i>
         </div>
+        
         <form class="select_font">
             <select @change="sendFont" name="font" id="font">
                 <option value="Sans Serif">Sans Serif</option>
@@ -10,7 +11,9 @@
                 <option value="Lora">Lora</option>
                 <option value="Inconsolata">Inconsolata</option>
             </select>
+            <i class="fa-solid fa-chevron-down"></i>
         </form>
+
         <div class="btn_theme">
             <input type="checkbox" v-model="isChecked" @change="checkboxChanged" id="darkmode-toggle"/>
             <label for="darkmode-toggle"></label>
@@ -51,16 +54,26 @@ export default {
     }
     .icon_dictionary{
         display: flex;
-        align-items: center;
-        width: 50%;
+        justify-content: left;
+        width: 65%;
+    }
+    .fa-book{
+        height: 100%;
+        color: var(--medium-grey);
     }
     .select_font{
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 20%;
+        width: 150px;
         margin-right: 25px;
-
+    }
+    .fa-chevron-down{
+        position: absolute;
+        right: 1px;
+        color: var(--main-purple);
+        pointer-events: none;
     }
     #font{
         border: none;
@@ -73,7 +86,6 @@ export default {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        background-image: url('../assets/Path.png');
         background-repeat: no-repeat;
         background-position: right ;
         background-size: 9px 9px;
@@ -94,7 +106,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 13%;
+        width: 110px;
         border-left: 2px solid var(--lines-light) ;
         padding-left: 17px;
     }
@@ -129,7 +141,7 @@ export default {
         background: var(--main-purple);
     }
     .btn_theme > input:checked + label:after {
-        left:28px;
+        left:29px;
         transform: translateX(-10%);
         background: var(--white);
     }
@@ -145,6 +157,7 @@ export default {
         margin-bottom: 2px;
     }
 
+
     @media only screen and (max-width: 700px) {
         header{
             margin-left: 30px;
@@ -154,8 +167,10 @@ export default {
             width: 15%;
         }
         .select_font{
-            width: 36%;
+            width: 38%;
     
+        }
+        .fa-chevron-down{
         }
         .btn_theme{
             width: 30%;
